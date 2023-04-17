@@ -6,7 +6,10 @@ import { trpc } from "../utils/trpc";
 
 const MyApp: AppType = ({ Component, pageProps: { ...pageProps } }) => {
   return (
-    <ClerkProvider {...pageProps}>
+    <ClerkProvider
+      publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY ?? ""}
+      {...pageProps}
+    >
       <Component {...pageProps} />
     </ClerkProvider>
   );
