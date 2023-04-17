@@ -25,5 +25,8 @@
     "titleBar.inactiveBackground": "#85288799",
     "titleBar.inactiveForeground": "#e7e7e799"
   },
-  "peacock.color": "#852887"
+  "peacock.color": "#852887",
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  }
 }
