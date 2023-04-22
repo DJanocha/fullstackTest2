@@ -6,10 +6,8 @@ import { trpc } from "../utils/trpc";
 
 const publishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY ?? "";
 const MyApp: AppType = ({ Component, pageProps: { ...pageProps } }) => {
-  console.log({ publishableKey });
   if (!publishableKey) {
-    const envKeys = Object.keys(process.env);
-    console.warn("could not find publishableKey!", { envKeys });
+    console.warn("❌ could not find publishableKey!");
     return null;
   }
   return (
